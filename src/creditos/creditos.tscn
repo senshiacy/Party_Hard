@@ -1,0 +1,108 @@
+[gd_scene load_steps=2 format=3 uid="uid://tjpwxhfh0vxq"]
+
+[ext_resource type="Script" path="res://src/creditos/creditos.gd" id="1_i65s5"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i65s5")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -467.5
+offset_right = 467.5
+offset_bottom = 110.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 80
+text = "Créditos "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -485.0
+offset_top = -211.0
+offset_right = 450.0
+offset_bottom = 388.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubtitleTutor" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Tutores"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tutores" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Adriano
+Luciano"
+horizontal_alignment = 1
+
+[node name="Espaço" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Subtitle" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Equipe"
+horizontal_alignment = 1
+
+[node name="Equipe" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Fernando Drekner
+Nathália Tsuno
+Renata Hobold
+Vinícius Paz"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -466.0
+offset_top = -117.0
+offset_right = 469.0
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Projeto desenvolvido pelo grupo de extensão USPGameDev durante o segundo semestre de 2024"
+
+[node name="Return" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -464.0
+offset_top = -75.0
+offset_right = 471.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Retornar ao Menu"
+
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

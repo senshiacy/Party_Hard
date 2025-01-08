@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Map" load_steps=2 format=3 uid="uid://wnhu2uvyxva6"]
+
+[ext_resource type="Script" path="res://src/cenarios/map.gd" id="1_i15q2"]
+
+[resource]
+script = ExtResource("1_i15q2")
+cenas_das_salas = Array[PackedScene]([])
+json_mapa = "{
+	\"matriz_caminho\":[
+		[-2, 1, 1],
+		[0, -2, 2],
+		[1, 1, -2]
+	],
+	\"matriz_portas\": [
+		[-1, 0, -1],
+		[0, -1, 1],
+		[-1, 0, -1]
+	]
+}
+"

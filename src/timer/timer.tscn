@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://biqsusds616up"]
+
+[ext_resource type="Texture2D" uid="uid://dg0yxlsfxtai8" path="res://src/timer/tmp2.webp" id="1_8cyy5"]
+[ext_resource type="Script" path="res://src/timer/timer.gd" id="1_ymn56"]
+[ext_resource type="Texture2D" uid="uid://fjwk165eypre" path="res://src/timer/tmp3.png" id="2_wihvj"]
+[ext_resource type="Texture2D" uid="uid://d1cokxyh6eeyn" path="res://src/timer/v2.png" id="3_v1iq0"]
+
+[node name="Timer" type="Control" node_paths=PackedStringArray("timer", "ponteiro_min", "ponteiro_seg")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 287.0
+offset_right = 9.0
+offset_bottom = 287.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ymn56")
+timer = NodePath("Timer")
+ponteiro_min = NodePath("Ponteiro_Min")
+ponteiro_seg = NodePath("Ponteiro_Seg")
+
+[node name="Relogio" type="Sprite2D" parent="."]
+position = Vector2(-12, -25)
+texture = ExtResource("1_8cyy5")
+
+[node name="Ponteiro_Min" type="Sprite2D" parent="."]
+position = Vector2(-3, -3.00003)
+scale = Vector2(0.843434, 0.624)
+texture = ExtResource("2_wihvj")
+offset = Vector2(72.2156, -133.526)
+
+[node name="Ponteiro_Seg" type="Sprite2D" parent="."]
+position = Vector2(-3, -8)
+rotation = 1.61792
+scale = Vector2(0.454966, 0.888936)
+texture = ExtResource("3_v1iq0")
+offset = Vector2(-56.6619, -140.917)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 90.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
